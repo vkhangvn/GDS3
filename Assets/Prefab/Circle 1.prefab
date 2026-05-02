@@ -10,11 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8535761495153758041}
   - component: {fileID: 4869789545051193337}
-  - component: {fileID: 7307845327668692840}
   - component: {fileID: 4142820877667017026}
   - component: {fileID: 5567652016266986309}
-  - component: {fileID: 6714017591974732219}
-  - component: {fileID: 2196505112716110754}
   m_Layer: 0
   m_Name: Circle 1
   m_TagString: Water
@@ -89,25 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!253 &7307845327668692840
-BuoyancyEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38182491237860242}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_SurfaceLevel: 4
-  m_Density: 4
-  m_LinearDrag: 5
-  m_AngularDrag: 5
-  m_FlowAngle: 2
-  m_FlowMagnitude: 2
-  m_FlowVariation: 2
 --- !u!58 &4142820877667017026
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -170,27 +148,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6714017591974732219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38182491237860242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfbf90ba54f4fd349a00fe09f2974b26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2196505112716110754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38182491237860242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfbf90ba54f4fd349a00fe09f2974b26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -7,7 +7,13 @@ public class Slime : MonoBehaviour
     public GameObject waterPrefab;
     public bool haveWater1;
     public int waterNumber;
-    
+
+    public GameObject shaker;
+    public GameObject wine;
+
+    public int waterLeft;
+    public List<GameObject> waterObjects;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +26,7 @@ public class Slime : MonoBehaviour
         if (waterNumber > 400)
         {
             haveWater1 = false;
+            StartCoroutine(Timer());
         }
         if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -32,11 +39,18 @@ public class Slime : MonoBehaviour
         }
     }
 
-    /*private void OnCollisionEnter2D(Collider2D other)
+
+    IEnumerator Timer()
     {
-        if (other.CompareTag("Wall"))
+       
+        yield return new WaitForSeconds(3f);
+        GameObject[] foundWater = GameObject.FindGameObjectsWithTag("Water");
+        waterObjects = new List<GameObject>(foundWater);
+        foreach (GameObject water in waterObjects)
         {
-            transform.localScale = new Vector3(2f, 0.1f, transform.localScale.z);
+            waterLeft++;
         }
-    } */
+        wine.SetActive(false);
+        shaker.SetActive(shaker);
+    }
 }
