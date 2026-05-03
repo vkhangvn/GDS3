@@ -32,7 +32,7 @@ public class Slime : MonoBehaviour
         {
             if (haveWater1)
             { 
-                GameObject newWater = Object.Instantiate(waterPrefab, transform.position, Quaternion.identity);
+                GameObject newWater = Object.Instantiate(waterPrefab, transform.position, Quaternion.identity,wine.transform);
                 waterNumber++;
             }
 

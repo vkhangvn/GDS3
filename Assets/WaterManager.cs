@@ -15,6 +15,8 @@ public class WaterManager : MonoBehaviour
     public bool haveWater2;
 
     public GameObject waterPrefab;
+    public GameObject endingScreen;
+    public GameObject timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,8 @@ public class WaterManager : MonoBehaviour
             if (waterNumber == waterLeft)
             {
                 haveWater2 = false;
+                timer.SetActive(false);
+
             }
 
             if (Input.GetKey(KeyCode.Mouse0))
@@ -40,9 +44,18 @@ public class WaterManager : MonoBehaviour
                 {
                     GameObject newWater = Object.Instantiate(waterPrefab, transform.position, Quaternion.identity);
                     waterNumber++;
+                    
                 }
 
             }
         }
+    }
+
+    IEnumerator Timer()
+    {
+
+        yield return new WaitForSeconds(3f);
+        endingScreen.SetActive(true);
+
     }
 }

@@ -12,10 +12,13 @@ public class Shaker : MonoBehaviour
     public GameObject glass;
 
     public bool level3;
+
     // Start is called before the first frame update
     void Start()
     {
+
         StartCoroutine(Timer());
+        glass.SetActive(false);
     }
 
     // Update is called once per frame
