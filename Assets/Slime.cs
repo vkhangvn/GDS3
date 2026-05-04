@@ -10,7 +10,7 @@ public class Slime : MonoBehaviour
 
     public GameObject shaker;
     public GameObject wine;
-
+    public GameObject fluid;
     public int waterLeft;
     public List<GameObject> waterObjects;
 
@@ -23,7 +23,7 @@ public class Slime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (waterNumber > 400)
+        if (waterNumber > 250)
         {
             haveWater1 = false;
             StartCoroutine(Timer());
@@ -32,7 +32,7 @@ public class Slime : MonoBehaviour
         {
             if (haveWater1)
             { 
-                GameObject newWater = Object.Instantiate(waterPrefab, transform.position, Quaternion.identity,wine.transform);
+                GameObject newWater = Object.Instantiate(waterPrefab, transform.position, Quaternion.identity, fluid.transform);
                 waterNumber++;
             }
 
@@ -43,7 +43,7 @@ public class Slime : MonoBehaviour
     IEnumerator Timer()
     {
        
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4.2f);
         GameObject[] foundWater = GameObject.FindGameObjectsWithTag("Water");
         waterObjects = new List<GameObject>(foundWater);
         foreach (GameObject water in waterObjects)
@@ -52,5 +52,6 @@ public class Slime : MonoBehaviour
         }
         wine.SetActive(false);
         shaker.SetActive(shaker);
+        Destroy(fluid);
     }
 }

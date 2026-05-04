@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Water
   - Wall2
+  - inGlass
   layers:
   - Default
   - TransparentFX

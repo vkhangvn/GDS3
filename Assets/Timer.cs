@@ -6,19 +6,20 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField]  float timeRemain;
+    public float timeRemain;
     public bool fail;
+    public WaterManager waterManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeRemain = 180f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeRemain > 0)
+        if (timeRemain > 0 && waterManager.completed == false)
         {
             timeRemain -= Time.deltaTime;
 
@@ -39,6 +40,6 @@ public class Timer : MonoBehaviour
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-       
+
     }
 }
