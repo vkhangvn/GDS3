@@ -29,7 +29,7 @@ public class Shaker : MonoBehaviour
         float speed = rb.velocity.magnitude;
         
 
-        if (speed > 3f || speed < -3f)
+        if (speed > 10f || speed < -10f)
         {
             score++;
         }

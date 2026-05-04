@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Wall : MonoBehaviour
+public class Button : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -12,16 +12,8 @@ public class Wall : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D other)
+    public void onTaskClick()
     {
-        if (other.CompareTag("Player"))
-        {
-            StartCoroutine(Timer());
-        }
-    }
-    IEnumerator Timer()
-    {
-        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("Wine 1");
     }
 }

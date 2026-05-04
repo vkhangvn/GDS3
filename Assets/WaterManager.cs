@@ -57,11 +57,11 @@ public class WaterManager : MonoBehaviour
 
     IEnumerator Timer1()
     {
-
+        
         yield return new WaitForSeconds(5f);
         pointChecker.SetActive(true);
         yield return new WaitForSeconds(1f);
         endingScreen.SetActive(true);
-
+        shaker1.SetActive(false);
     }
 }

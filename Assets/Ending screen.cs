@@ -12,6 +12,7 @@ public class Endingscreen : MonoBehaviour
     public float time;
     public PointCaculator pointCaculator;
     public Timer timer;
+    public Shaker shaker;
 
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI ratingText;
@@ -24,7 +25,7 @@ public class Endingscreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = pointCaculator.waterInGlass;
+        score = pointCaculator.waterInGlass + shaker.score;
         time = timer.timeRemain;
 
             if (pointCaculator.waterInGlass < 50 )
@@ -32,17 +33,17 @@ public class Endingscreen : MonoBehaviour
             rating = 0;
         }
 
-        if ((pointCaculator.waterInGlass < 100 && pointCaculator.waterInGlass > 50f) && timer.timeRemain < 70f)
+        if (pointCaculator.waterInGlass < 100 && pointCaculator.waterInGlass > 50f)
         {
             rating = 1;
         }
 
-        if ((pointCaculator.waterInGlass < 200 && pointCaculator.waterInGlass > 100) && (timer.timeRemain > 70f && timer.timeRemain < 120f))
+        if (pointCaculator.waterInGlass < 230 && pointCaculator.waterInGlass > 100)
         {
             rating = 2;
         }
 
-        if (pointCaculator.waterInGlass > 200 && timer.timeRemain > 120f)
+        if (pointCaculator.waterInGlass > 230)
         {
             rating = 3;
         }
