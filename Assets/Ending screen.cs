@@ -28,22 +28,22 @@ public class Endingscreen : MonoBehaviour
         score = pointCaculator.waterInGlass + shaker.score;
         time = timer.timeRemain;
 
-            if (pointCaculator.waterInGlass < 50 )
+            if (pointCaculator.waterInGlass < 31 )
         {
             rating = 0;
         }
 
-        if (pointCaculator.waterInGlass < 100 && pointCaculator.waterInGlass > 50f)
+        if (pointCaculator.waterInGlass < 101 && pointCaculator.waterInGlass > 30f)
         {
             rating = 1;
         }
 
-        if (pointCaculator.waterInGlass < 230 && pointCaculator.waterInGlass > 100)
+        if (pointCaculator.waterInGlass < 141 && pointCaculator.waterInGlass > 100)
         {
             rating = 2;
         }
 
-        if (pointCaculator.waterInGlass > 230)
+        if (pointCaculator.waterInGlass > 140)
         {
             rating = 3;
         }

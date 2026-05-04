@@ -14,6 +14,10 @@ public class Slime : MonoBehaviour
     public int waterLeft;
     public List<GameObject> waterObjects;
 
+    public GameObject shakerContainer;
+
+    public GameObject prepControl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +27,7 @@ public class Slime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (waterNumber > 250)
+        if (waterNumber > 180)
         {
             haveWater1 = false;
             StartCoroutine(Timer());
@@ -50,8 +54,9 @@ public class Slime : MonoBehaviour
         {
             waterLeft++;
         }
+        shakerContainer.SetActive(false);
         wine.SetActive(false);
-        shaker.SetActive(shaker);
+        prepControl.SetActive(true);
         Destroy(fluid);
     }
 }

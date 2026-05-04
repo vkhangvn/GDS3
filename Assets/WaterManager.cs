@@ -63,5 +63,7 @@ public class WaterManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         endingScreen.SetActive(true);
         shaker1.SetActive(false);
+
     }
+
 }

@@ -12,6 +12,7 @@ public class Shaker : MonoBehaviour
     public GameObject glass;
 
     public bool level3;
+    public GameObject prepControl;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class Shaker : MonoBehaviour
         float speed = rb.velocity.magnitude;
         
 
-        if (speed > 10f || speed < -10f)
+        if (speed > 20f || speed < -20f)
         {
             score++;
         }
@@ -38,9 +39,10 @@ public class Shaker : MonoBehaviour
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(10f);
-        shaker.SetActive(false);
-        shakerDrop.SetActive(true);
+
+        prepControl.SetActive(true);
         glass.SetActive(true);
         level3 = true;
+        shaker.SetActive(false);
     }
 }
