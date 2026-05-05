@@ -8,7 +8,7 @@ public class guideObject : MonoBehaviour
     public Flowchart mainFlowchart;
     public bool firstLevel;
     public bool secondLevel;
-
+    public GameObject guide;
 
 
     // Start is called before the first frame update
@@ -22,10 +22,11 @@ public class guideObject : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            
             firstLevel = false;
             secondLevel = true;
             mainFlowchart.ExecuteBlock("Done first tutorial");
-
+            guide.SetActive(false);
         }
     }
 }

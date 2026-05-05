@@ -17,6 +17,7 @@ public class Slime : MonoBehaviour
     public GameObject shakerContainer;
 
     public GameObject prepControl;
+    public GameObject wineAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +36,16 @@ public class Slime : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0))
         {
             if (haveWater1)
-            { 
+            {
+                wineAudio.SetActive(true);
                 GameObject newWater = Object.Instantiate(waterPrefab, transform.position, Quaternion.identity, fluid.transform);
                 waterNumber++;
             }
 
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+                wineAudio.SetActive(false);
         }
     }
 

@@ -19,6 +19,8 @@ public class WaterManager : MonoBehaviour
     public GameObject endingScreen;
     public GameObject pointChecker;
 
+    public GameObject wineAudio;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,7 @@ public class WaterManager : MonoBehaviour
 
             if (waterNumber == waterLeft)
             {
-
+                wineAudio.SetActive(false);
                 haveWater2 = false;
                 StartCoroutine(Timer1());
                 completed = true;
@@ -46,11 +48,17 @@ public class WaterManager : MonoBehaviour
             {
                 if (haveWater2)
                 {
+                    wineAudio.SetActive(true);
                     GameObject newWater = Object.Instantiate(waterPrefab, transform.position, Quaternion.identity);
                     waterNumber++;
                     
                 }
 
+            }
+
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                wineAudio.SetActive(false);
             }
         }
     }

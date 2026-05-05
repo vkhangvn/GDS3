@@ -13,6 +13,9 @@ public class Sceneprep : MonoBehaviour
     public GameObject shakerDrop;
 
     public GameObject prepControl;
+
+    public Transform startPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +47,7 @@ public class Sceneprep : MonoBehaviour
 
     IEnumerator Timer1()
     {
+        wine.transform.position = startPosition.position;
         yield return new WaitForSeconds(0.3f);
         wine.SetActive(true);
         winePrep = false;
@@ -53,6 +57,7 @@ public class Sceneprep : MonoBehaviour
 
     IEnumerator Timer2()
     {
+        shaker.transform.position = startPosition.position;
         yield return new WaitForSeconds(0.3f);
         shaker.SetActive(true);
         shakerPrep = false;
@@ -62,6 +67,7 @@ public class Sceneprep : MonoBehaviour
 
     IEnumerator Timer3()
     {
+        shakerDrop.transform.position = startPosition.position;
         yield return new WaitForSeconds(0.3f);
         shakerDrop.SetActive(true);
         shakerDropPrep = false;

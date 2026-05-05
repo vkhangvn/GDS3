@@ -21,7 +21,7 @@ public class Wall : MonoBehaviour
     }
     IEnumerator Timer()
     {
-        yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("Wine 1");
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("Fail menu");
     }
 }

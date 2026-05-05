@@ -14,6 +14,13 @@ public class Shaker : MonoBehaviour
     public bool level3;
     public GameObject prepControl;
 
+    public GameObject scoring1;
+    public GameObject scoring2;
+    public GameObject scoring3;
+    public int randomScore;
+
+    public GameObject pointAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +37,9 @@ public class Shaker : MonoBehaviour
         float speed = rb.velocity.magnitude;
         
 
-        if (speed > 20f || speed < -20f)
+        if (speed > 45f || speed < -45f)
         {
-            score++;
+            StartCoroutine(plusScore());
         }
     }
 
@@ -43,6 +50,38 @@ public class Shaker : MonoBehaviour
         prepControl.SetActive(true);
         glass.SetActive(true);
         level3 = true;
+        scoring1.SetActive(false);
+        scoring2.SetActive(false);
+        scoring3.SetActive(false);
         shaker.SetActive(false);
     }
+
+    IEnumerator plusScore()
+    {
+        randomScore = Random.Range(1, 3);
+        pointAudio.SetActive(true);
+        if (randomScore == 1)
+        {
+            scoring1.SetActive(true);
+        }
+
+        if (randomScore == 2)
+        {
+            scoring2.SetActive(true);
+        }
+
+        if (randomScore == 3)
+        {
+            scoring3.SetActive(true);
+        }
+
+        score++;
+
+        yield return new WaitForSeconds(1.3f);
+        scoring1.SetActive(false);
+        scoring2.SetActive(false);
+        scoring3.SetActive(false);
+        pointAudio.SetActive(false);
+    }
 }
+
