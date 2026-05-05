@@ -396,7 +396,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -59.04546
     y: 92
-    width: 109.21051
+    width: 105.102036
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -427,11 +427,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 264.06757, y: 120.473495}
+  scrollPos: {x: 1155.1901, y: 1615.0007}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
-  zoom: 0.7600002
+  blockViewHeight: 385
+  zoom: 0.49
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -439,9 +439,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 99754720}
+  - {fileID: 99754749}
   selectedCommands:
-  - {fileID: 99754725}
+  - {fileID: 99754745}
   variables: []
   description: 
   stepPause: 0
@@ -682,7 +682,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 410.89554
     y: -8.70462
-    width: 142.10522
+    width: 135.7143
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -881,7 +881,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 485.63348
     y: 58.659805
-    width: 160.52628
+    width: 152.04082
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1214,7 +1214,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 524.78986
     y: 136.75389
-    width: 144.73682
+    width: 137.7551
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1363,7 +1363,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 613.60205
     y: 216.33545
-    width: 139.47366
+    width: 133.67346
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1533,7 +1533,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 260.37808
     y: 256.10593
-    width: 106.57893
+    width: 103.06122
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1659,7 +1659,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 150.62192
     y: 260.98398
-    width: 102.63156
+    width: 101.02041
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1785,7 +1785,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 30.499878
     y: 257.32544
-    width: 103.94736
+    width: 101.02041
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1911,7 +1911,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -73.84769
     y: 256.23645
-    width: 101.31577
+    width: 98.97959
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2293,6 +2293,7 @@ GameObject:
   - component: {fileID: 132086567}
   - component: {fileID: 132086569}
   - component: {fileID: 132086570}
+  - component: {fileID: 132086571}
   m_Layer: 0
   m_Name: Sprites_shaker
   m_TagString: Untagged
@@ -2414,6 +2415,51 @@ MonoBehaviour:
   scoring3: {fileID: 1159934082}
   randomScore: 0
   score: 0
+--- !u!61 &132086571
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132086566}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.45, y: 8.61}
+    newSize: {x: 3.45, y: 8.61}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.45, y: 8.61}
+  m_EdgeRadius: 0
 --- !u!1 &178447707 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 38182491237860242, guid: 2eb801bb25a42f3449196ce3b766055d, type: 3}
@@ -2587,7 +2633,7 @@ Transform:
   m_GameObject: {fileID: 186246340}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.74, y: 27.85, z: -0.46636564}
+  m_LocalPosition: {x: -1.52, y: 24.47, z: -0.46636564}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

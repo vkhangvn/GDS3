@@ -19,6 +19,8 @@ public class Slime : MonoBehaviour
     public GameObject prepControl;
     public GameObject wineAudio;
 
+    public GameObject transitionTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +55,7 @@ public class Slime : MonoBehaviour
     IEnumerator Timer()
     {
        
-        yield return new WaitForSeconds(4.2f);
+        yield return new WaitForSeconds(4f);
         GameObject[] foundWater = GameObject.FindGameObjectsWithTag("Water");
         waterObjects = new List<GameObject>(foundWater);
         foreach (GameObject water in waterObjects)
@@ -62,7 +64,7 @@ public class Slime : MonoBehaviour
         }
         shakerContainer.SetActive(false);
         wine.SetActive(false);
-        prepControl.SetActive(true);
+        transitionTimer.SetActive(true);
         Destroy(fluid);
     }
 }

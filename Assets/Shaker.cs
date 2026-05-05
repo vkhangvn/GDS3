@@ -21,6 +21,8 @@ public class Shaker : MonoBehaviour
 
     public GameObject pointAudio;
 
+    public GameObject transitionTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,7 @@ public class Shaker : MonoBehaviour
         float speed = rb.velocity.magnitude;
         
 
-        if (speed > 45f || speed < -45f)
+        if (speed > 95f || speed < -95f)
         {
             StartCoroutine(plusScore());
         }
@@ -47,7 +49,7 @@ public class Shaker : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
 
-        prepControl.SetActive(true);
+        transitionTimer.SetActive(true);
         glass.SetActive(true);
         level3 = true;
         scoring1.SetActive(false);

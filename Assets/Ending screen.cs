@@ -25,25 +25,27 @@ public class Endingscreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = pointCaculator.waterInGlass + shaker.score;
+        score = (pointCaculator.waterInGlass * 4) + shaker.score;
         time = timer.timeRemain;
 
-            if (pointCaculator.waterInGlass < 31 )
+        Debug.Log(time);
+
+        if (score < 300 && time < 60 && time > 0)
         {
             rating = 0;
         }
 
-        if (pointCaculator.waterInGlass < 101 && pointCaculator.waterInGlass > 30f)
+        if (score < 700 && score >= 300 && time >= 60 )
         {
             rating = 1;
         }
 
-        if (pointCaculator.waterInGlass < 141 && pointCaculator.waterInGlass > 100)
+        if (score < 1400 && score >= 700 && time >= 90 )
         {
             rating = 2;
         }
 
-        if (pointCaculator.waterInGlass > 140)
+        if (score >= 1700 && time >= 120)
         {
             rating = 3;
         }
