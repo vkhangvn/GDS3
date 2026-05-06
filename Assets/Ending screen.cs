@@ -40,7 +40,7 @@ public class Endingscreen : MonoBehaviour
             rating = 1;
         }
 
-        if (score < 1400 && score >= 700 && time >= 90 )
+        if (score < 1700 && score >= 700 && time >= 90 )
         {
             rating = 2;
         }
