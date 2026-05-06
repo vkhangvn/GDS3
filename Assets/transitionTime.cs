@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class transitionTImer : MonoBehaviour
+public class transitionTime : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     public float timeRemain;
