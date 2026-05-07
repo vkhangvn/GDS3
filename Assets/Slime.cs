@@ -21,6 +21,8 @@ public class Slime : MonoBehaviour
 
     public GameObject transitionTimer;
 
+    public transitionTime transitionTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +67,7 @@ public class Slime : MonoBehaviour
         shakerContainer.SetActive(false);
         wine.SetActive(false);
         transitionTimer.SetActive(true);
+        transitionTime.shaker = true;
         Destroy(fluid);
     }
 }

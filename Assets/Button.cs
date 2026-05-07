@@ -16,4 +16,14 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene("Wine 1");
     }
+
+    public void tutorialScene()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void exit()
+    {
+        Application.Quit();
+    }
 }

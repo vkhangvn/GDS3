@@ -22,6 +22,7 @@ public class Shaker : MonoBehaviour
     public GameObject pointAudio;
 
     public GameObject transitionTimer;
+    public transitionTime transitionTime;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,7 @@ public class Shaker : MonoBehaviour
 
         transitionTimer.SetActive(true);
         glass.SetActive(true);
+        transitionTime.shakerDrop = true;
         level3 = true;
         scoring1.SetActive(false);
         scoring2.SetActive(false);
