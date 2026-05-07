@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
+    public GameObject resumeTimer;
+    public Pause pause;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +27,27 @@ public class Button : MonoBehaviour
     public void exit()
     {
         Application.Quit();
+    }
+
+    public void resume()
+    {
+        pause.pausing = false;
+        resumeTimer.SetActive(true);
+
+    }
+
+    public void mainMenuLoad()
+    {
+        
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.F))
+        {
+            SceneManager.LoadScene("Wine 1");
+        }
+            
     }
 }
