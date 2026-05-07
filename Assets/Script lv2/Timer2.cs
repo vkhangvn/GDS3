@@ -1,25 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class Timer : MonoBehaviour
+public class Timer2 : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     public float timeRemain;
     public bool fail;
-    public WaterManager waterManager;
+    public Spice spice;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeRemain = 180f;
+        timeRemain = 110f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeRemain > 0 && waterManager.completed == false)
+        if (timeRemain > 0 && spice.completed == false)
         {
             timeRemain -= Time.deltaTime;
 
