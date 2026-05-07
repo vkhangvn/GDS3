@@ -10,6 +10,7 @@ TagManager:
   - Wall2
   - inGlass
   - Icepoint
+  - grabPoint
   layers:
   - Default
   - TransparentFX

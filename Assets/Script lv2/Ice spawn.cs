@@ -5,22 +5,38 @@ using UnityEngine;
 public class Icespawn : MonoBehaviour
 {
     public GameObject icePrefab;
+    public bool icing;
 
 
 
     // Update is called once per frame
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Icepoint"))
         {
-            Debug.Log("work");
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            icing = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Icepoint"))
+        {
+            icing = false;
+        }
+
+    }
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(icing)
             {
-            
                 GameObject newIce = Object.Instantiate(icePrefab, transform.position, Quaternion.identity);
+
             }
         }
     }
-    
+
 }
 
