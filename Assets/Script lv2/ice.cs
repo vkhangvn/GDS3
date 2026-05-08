@@ -7,6 +7,7 @@ public class ice : MonoBehaviour
     public bool toolTouching;
     public GameObject toolTip;
     public bool following;
+
     // Start is called before the first frame update
     void Start()
     {

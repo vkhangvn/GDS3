@@ -62,7 +62,6 @@ public class scenePrep2 : MonoBehaviour
 
     IEnumerator Timer2()
     {
-        ice.transform.position = startPosition.position;
         yield return new WaitForSeconds(0.3f);
         ice.SetActive(true);
         icePrep = false;

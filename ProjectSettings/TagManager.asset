@@ -11,6 +11,9 @@ TagManager:
   - inGlass
   - Icepoint
   - grabPoint
+  - Ice1
+  - Ice2
+  - Ice3
   layers:
   - Default
   - TransparentFX
