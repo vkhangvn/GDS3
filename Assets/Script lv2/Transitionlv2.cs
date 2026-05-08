@@ -17,7 +17,7 @@ public class Transitionlv2 : MonoBehaviour
 
     public bool wine;
     public bool ice;
-    public bool shakerDrop;
+    public bool spice;
 
     public GameObject wineTutorial;
     public GameObject iceTutorial;
@@ -45,10 +45,10 @@ public class Transitionlv2 : MonoBehaviour
 
         }
 
-        if (shakerDrop)
+        if (spice)
         {
-            shakerDrop = false;
-            StartCoroutine(Tutorial1());
+            spice = false;
+            StartCoroutine(Tutorial3());
 
         }
 
@@ -128,6 +128,22 @@ public class Transitionlv2 : MonoBehaviour
 
         wineTutorial.SetActive(false);
         iceTutorial.SetActive(false);
+
+    }
+
+    IEnumerator Tutorial3()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            wineTutorial.SetActive(true);
+            yield return new WaitForSeconds(0.501f);
+            wineTutorial.SetActive(false);
+            yield return new WaitForSeconds(0.501f);
+
+        }
+
+        wineTutorial.SetActive(false);
+
 
     }
 }
