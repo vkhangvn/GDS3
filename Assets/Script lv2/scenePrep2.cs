@@ -17,8 +17,6 @@ public class scenePrep2 : MonoBehaviour
 
     public Transform startPosition;
 
-    public GameObject iceTutorial;
-    public GameObject shakerTutorial;
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +29,13 @@ public class scenePrep2 : MonoBehaviour
     {
 
 
-        if (icePrep)
+        if (winePrep)
         {
 
             StartCoroutine(Timer1());
         }
 
-        else if (winePrep)
+        else if (icePrep)
         {
 
             StartCoroutine(Timer2());
