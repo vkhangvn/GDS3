@@ -16,7 +16,7 @@ public class scenePrep2 : MonoBehaviour
     public GameObject prepControl;
     public Transform startPosition;
 
-
+    public GameObject iceCube;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +40,7 @@ public class scenePrep2 : MonoBehaviour
             StartCoroutine(Timer2());
         }
 
-        else if (spice)
+        else if (spicePrep)
 
         {
             StartCoroutine(Timer3());
@@ -62,6 +62,7 @@ public class scenePrep2 : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         ice.SetActive(true);
+        iceCube.SetActive(true);
         icePrep = false;
         spicePrep = true;
         prepControl.SetActive(false);

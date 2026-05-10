@@ -96,40 +96,39 @@ public class Transitionlv2 : MonoBehaviour
         }
 
         wineTutorial.SetActive(false);
-
+    
 
     }
 
     IEnumerator Tutorial2()
     {
-        for (int i = 0; i < 3; i++)
-        {
-            for (int e = 0; i < 2; e++)
+   
+            for (int e = 0; e < 2; e++)
             {
                 iceTutorial.SetActive(true);
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.2f);
                 iceTutorial.SetActive(false);
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.2f);
             }
 
             wineTutorial.SetActive(true);
-            yield return new WaitForSeconds(0.501f);
+            yield return new WaitForSeconds(0.2f);
             wineTutorial.SetActive(false);
-            yield return new WaitForSeconds(0.501f);
+            yield return new WaitForSeconds(0.2f);
             wineTutorial.SetActive(true);
-            yield return new WaitForSeconds(0.501f);
+            yield return new WaitForSeconds(0.2f);
             wineTutorial.SetActive(false);
-            yield return new WaitForSeconds(0.501f);
+            yield return new WaitForSeconds(0.2f);
             wineTutorial.SetActive(true);
-            yield return new WaitForSeconds(0.501f);
+            yield return new WaitForSeconds(0.2f);
             wineTutorial.SetActive(false);
-            yield return new WaitForSeconds(0.501f);
-        }
+            yield return new WaitForSeconds(0.2f);
 
         wineTutorial.SetActive(false);
         iceTutorial.SetActive(false);
-
     }
+
+      
 
     IEnumerator Tutorial3()
     {
@@ -144,6 +143,6 @@ public class Transitionlv2 : MonoBehaviour
 
         wineTutorial.SetActive(false);
         transitionTimer.SetActive(false);
-
+        scenePrep.SetActive(true);
     }
 }

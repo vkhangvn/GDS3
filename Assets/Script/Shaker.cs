@@ -24,6 +24,9 @@ public class Shaker : MonoBehaviour
     public GameObject transitionTimer;
     public transitionTime transitionTime;
 
+    [SerializeField] private Animator shakerOpened;
+    public bool pouring;
+
     // Start is called before the first frame update
     void Start()
     {
