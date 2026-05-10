@@ -5,9 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager2 : MonoBehaviour
 {
+    public GameObject resumeTimer;
+    public Pause pause;
+
     public void retry()
     {
         SceneManager.LoadScene("Wine 2");
+    }
+
+    public void next()
+    {
+        SceneManager.LoadScene("Level Menu");
     }
 
     public void Update()
@@ -17,5 +25,12 @@ public class ButtonManager2 : MonoBehaviour
             SceneManager.LoadScene("Wine 2");
         }
 
+
+    }
+
+    public void resume()
+    {
+        pause.pausing = false;
+        resumeTimer.SetActive(true);
     }
 }

@@ -21,7 +21,7 @@ public class WaterManager : MonoBehaviour
 
     public GameObject wineAudio;
 
-
+    public static bool level1Completed;
 
 
     // Start is called before the first frame update
@@ -44,6 +44,7 @@ public class WaterManager : MonoBehaviour
                 haveWater2 = false;
                 StartCoroutine(Timer1());
                 completed = true;
+                level1Completed = true;
             }
 
             if (Input.GetKey(KeyCode.Mouse0))

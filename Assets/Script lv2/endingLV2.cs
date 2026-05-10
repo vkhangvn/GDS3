@@ -28,22 +28,22 @@ public class endingLV2 : MonoBehaviour
 
         Debug.Log(time);
 
-        if (score < 300 && time < 60 && time > 0)
+        if (score < 300 && time < 30 && time > 0)
         {
             rating = 0;
         }
 
-        if (score < 700 && score >= 300 && time >= 60)
+        if (score < 700 && score >= 300 && time >= 30)
         {
             rating = 1;
         }
 
-        if (score < 1700 && score >= 700 && time >= 90)
+        if (score < 1700 && score >= 700 && time >= 45)
         {
             rating = 2;
         }
 
-        if (score >= 1700 && time >= 120)
+        if (score >= 1700 && time >= 60)
         {
             rating = 3;
         }
@@ -53,9 +53,9 @@ public class endingLV2 : MonoBehaviour
         scoreText.text = scoreT;
         ratingText.text = ratingT;
 
-        // 3star = 120s
-        // 2star = 90-120s
-        // 1star = <90s
+        // 3star = 60s
+        // 2star = 45s
+        // 1star = 30s
     }
 
 

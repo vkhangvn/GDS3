@@ -50,4 +50,9 @@ public class Button : MonoBehaviour
         }
             
     }
+
+    public void next()
+    {
+        SceneManager.LoadScene("Level Menu");
+    }
 }
