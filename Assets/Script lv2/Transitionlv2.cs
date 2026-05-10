@@ -76,7 +76,7 @@ public class Transitionlv2 : MonoBehaviour
 
     IEnumerator Timer()
     {
-
+        Debug.Log("running");
         yield return new WaitForSeconds(0.1f);
         gameTimer.SetActive(true);
         scenePrep.SetActive(true);
@@ -143,7 +143,7 @@ public class Transitionlv2 : MonoBehaviour
         }
 
         wineTutorial.SetActive(false);
-
+        transitionTimer.SetActive(false);
 
     }
 }

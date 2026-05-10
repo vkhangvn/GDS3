@@ -14,7 +14,6 @@ public class scenePrep2 : MonoBehaviour
 
 
     public GameObject prepControl;
-
     public Transform startPosition;
 
 
@@ -44,7 +43,6 @@ public class scenePrep2 : MonoBehaviour
         else if (spice)
 
         {
-
             StartCoroutine(Timer3());
         }
 

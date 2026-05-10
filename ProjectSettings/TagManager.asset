@@ -14,6 +14,7 @@ TagManager:
   - Ice1
   - Ice2
   - Ice3
+  - Spice
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,7 @@ public class iceCheck : MonoBehaviour
 
     public GameObject ice;
     public GameObject transitionTimer;
+    public bool transitionOnce;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,12 @@ public class iceCheck : MonoBehaviour
     {
         if (  ice1Done &&  ice2Done && ice3Done )
         {
-            ice.SetActive( false );
-            transitionTimer.SetActive(true);
+            if (transitionOnce)
+            {
+                ice.SetActive(false);
+                transitionTimer.SetActive(true);
+                transitionOnce = false;
+            }
         }
     }
 
