@@ -31,7 +31,7 @@ public class Pourwine : MonoBehaviour
 
     void Update()
     {
-        if (waterNumber > 180)
+        if (waterNumber > 300)
         {
             haveWater1 = false;
             StartCoroutine(Timer());

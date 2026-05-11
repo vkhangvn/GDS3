@@ -29,7 +29,7 @@ public class wineDropTutorial : MonoBehaviour
     {
       
 
-            if (waterNumber == waterLeft)
+            if (waterNumber == (waterLeft + 60))
             {
 
                 haveWater2 = false;

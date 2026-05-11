@@ -46,7 +46,5 @@ public class Spice : MonoBehaviour
         spice.SetActive(false);
         endingScreen.SetActive(true);
 
-
-
     }
 }
