@@ -15,9 +15,13 @@ public class endingLV2 : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI ratingText;
 
+    public GameObject gameHand;
+
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
+        gameHand.SetActive(false);
     }
 
     // Update is called once per frame

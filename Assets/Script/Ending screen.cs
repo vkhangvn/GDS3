@@ -13,6 +13,7 @@ public class Endingscreen : MonoBehaviour
     public PointCaculator pointCaculator;
     public Timer timer;
     public Shaker shaker;
+    public GameObject gameHand;
 
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI ratingText;
@@ -20,6 +21,8 @@ public class Endingscreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameHand.SetActive(false);
+        Cursor.visible = true;
     }
 
     // Update is called once per frame

@@ -11,6 +11,9 @@ public class pauseTimer : MonoBehaviour
     public GameObject pauseTime;
 
     public GameObject pauseMenu;
+
+    public GameObject gameHand;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,8 @@ public class pauseTimer : MonoBehaviour
 
         if (timeRemain > 0)
         {
-            
+            Cursor.visible = false;
+            gameHand.SetActive(true);
             timeRemain -= Time.unscaledDeltaTime;
             pauseMenu.SetActive(false);
         }

@@ -6,9 +6,12 @@ public class Pause : MonoBehaviour
 {
     public GameObject transitionTimer;
     public GameObject pauseMenu;
+
     public bool pausing;
 
     public pauseTimer pauseTimer;
+
+    public GameObject gameHand;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,8 @@ public class Pause : MonoBehaviour
             {
                 if (pausing == false)
                 {
+                    gameHand.SetActive(false);
+                    Cursor.visible = true;
                     pauseMenu.SetActive(true);
                     Debug.Log("a");
                     pauseTimer.timeRemain = 3;

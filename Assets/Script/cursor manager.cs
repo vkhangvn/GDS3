@@ -5,7 +5,7 @@ using UnityEngine;
 public class cursormanager : MonoBehaviour
 {
 
-
+    [SerializeField] private Animator hand;
     private Vector2 cursorHotspot;
     // Start is called before the first frame update
     void Start()
@@ -25,14 +25,14 @@ public class cursormanager : MonoBehaviour
         //Move myself to that position
         transform.position = new Vector3(mousePositionInWorld.x, mousePositionInWorld.y, 0);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-
+            hand.SetBool("clicking", true);
         }
 
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-
+            hand.SetBool("clicking", false);
         }
     }
 }
