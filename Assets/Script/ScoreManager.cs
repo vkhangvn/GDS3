@@ -10,6 +10,8 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bool completed = PlayerPrefs.GetInt("Level2Unlocked", 0) == 1;
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
         lv1Text.text = string.Format("{0}", HighScore.highScore);
     }
 

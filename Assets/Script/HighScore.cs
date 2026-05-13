@@ -15,6 +15,10 @@ public class HighScore : MonoBehaviour
         {
             highScore = endingScreen.score;
             highRating = endingScreen.rating;
+
+            PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.SetInt("highRating", highRating);
+            PlayerPrefs.Save();
         }
     }
 }

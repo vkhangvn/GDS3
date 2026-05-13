@@ -47,6 +47,7 @@ public class WaterManager : MonoBehaviour
                 haveWater2 = false;
                 StartCoroutine(Timer1());
                 completed = true;
+                PlayerPrefs.SetInt("Level2Unlocked", completed ? 1 : 0);
                 level1Completed = true;
             }
 

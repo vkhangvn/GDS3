@@ -42,12 +42,12 @@ public class endingLV2 : MonoBehaviour
             rating = 1;
         }
 
-        if (score < 1700 && score >= 700 && time >= 45)
+        if (score < 1700 && score >= 700 && time >= 40)
         {
             rating = 2;
         }
 
-        if (score >= 1700 && time >= 60)
+        if (score >= 1700 && time >= 50)
         {
             rating = 3;
         }
@@ -57,8 +57,8 @@ public class endingLV2 : MonoBehaviour
         scoreText.text = scoreT;
         ratingText.text = ratingT;
 
-        // 3star = 60s
-        // 2star = 45s
+        // 3star = 50s
+        // 2star = 40s
         // 1star = 30s
     }
 
