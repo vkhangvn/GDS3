@@ -8,6 +8,9 @@ public class Button : MonoBehaviour
     public GameObject resumeTimer;
     public Pause pause;
     public GameObject themeSong;
+
+    public GameObject clickSound1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,5 +60,18 @@ public class Button : MonoBehaviour
         SceneManager.LoadScene("Level Menu");
     }
 
-    
+    public void Opening()
+    {
+        StartCoroutine(timerOpening());
+
+    }
+
+    IEnumerator timerOpening()
+    {
+        themeSong.SetActive(false);
+        clickSound1.SetActive(true);
+        yield return new WaitForSeconds(0.25f);
+        SceneManager.LoadScene("Opening");
+    }
+
 }
