@@ -7,6 +7,7 @@ public class Button : MonoBehaviour
 {
     public GameObject resumeTimer;
     public Pause pause;
+    public GameObject themeSong;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,4 +56,6 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene("Level Menu");
     }
+
+    
 }
