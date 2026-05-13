@@ -30,7 +30,6 @@ public class Shaker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         StartCoroutine(Timer());
         glass.SetActive(false);
     }
@@ -92,3 +91,7 @@ public class Shaker : MonoBehaviour
     }
 }
 
+// 300 goodfeeback
+// 200 nice
+//100 ok
+//<100 bad
