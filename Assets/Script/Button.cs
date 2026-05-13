@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Button : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class Button : MonoBehaviour
     public GameObject themeSong;
 
     public GameObject clickSound1;
+    public GameObject setting;
 
+    public Slider volumeLimitSlider;
+
+    public static float volume;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,12 +71,49 @@ public class Button : MonoBehaviour
 
     }
 
+    public void SettingOpen()
+    {
+        StartCoroutine(settingOpening());
+
+    }
+
+    public void SettingExit()
+    {
+        StartCoroutine(settingexit());
+    }
+
     IEnumerator timerOpening()
     {
         themeSong.SetActive(false);
         clickSound1.SetActive(true);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.4f);
         SceneManager.LoadScene("Opening");
     }
 
+    IEnumerator settingOpening()
+    {
+        clickSound1.SetActive(true);
+        yield return new WaitForSeconds(0.4f);
+        setting.SetActive(true);
+        clickSound1.SetActive(false);
+    }
+
+    IEnumerator settingexit()
+    {
+        clickSound1.SetActive(true);
+        yield return new WaitForSeconds(0.4f);
+        setting.SetActive(false);
+        clickSound1.SetActive(false);
+    }
+
+    public void setVolumeLimit()
+    {
+        volumeLimitSlider.onValueChanged.AddListener(delegate { volumeChangeCheck(); });
+    }
+
+    public void volumeChangeCheck()
+    {
+        volume = volumeLimitSlider.value;
+        AudioListener.volume = volume;
+    }
 }
