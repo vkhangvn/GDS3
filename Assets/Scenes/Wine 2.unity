@@ -1405,6 +1405,7 @@ MonoBehaviour:
   transitionTimer: {fileID: 405382417}
   transitionLV2: {fileID: 1774541927}
   iceContainer: {fileID: 382731000}
+  ice: {fileID: 1238172333}
 --- !u!1 &182844457
 GameObject:
   m_ObjectHideFlags: 0

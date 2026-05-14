@@ -22,6 +22,7 @@ public class wineLV2 : MonoBehaviour
     public Transitionlv2 transitionLV2;
 
     public GameObject iceContainer;
+    public GameObject ice;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +64,7 @@ public class wineLV2 : MonoBehaviour
         {
             waterLeft++;
         }
+        ice.SetActive(true);
         transitionLV2.ice = true;
         iceContainer.SetActive(true);
         transitionTimer.SetActive(true);

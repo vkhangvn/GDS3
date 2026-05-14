@@ -15,7 +15,7 @@ public class LockedLV2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(WaterManager.level1Completed)
+        if (WaterManager.level1Completed)
         {
             locked.SetActive(false);
             unlocked.SetActive(true);

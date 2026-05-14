@@ -9,8 +9,6 @@ public class LV2highscore : MonoBehaviour
 
     public endingLV2 endingScreen2;
 
-    private const string HIGH_SCORE_KEY = "LV2_HighScore";
-    private const string HIGH_RATING_KEY = "LV2_HighRating";
     // Update is called once per frame
     void Update()
     {
@@ -18,16 +16,11 @@ public class LV2highscore : MonoBehaviour
         {
             highScore2 = endingScreen2.score;
             highRating2 = endingScreen2.rating;
+
+            PlayerPrefs.SetInt("HighScore2", highScore2);
+            PlayerPrefs.SetInt("highRating2", highRating2);
+            PlayerPrefs.Save();
         }
-
-        SaveHighScore();
-    }
-
-    void SaveHighScore()
-    {
-        PlayerPrefs.SetInt(HIGH_SCORE_KEY, highScore2);
-        PlayerPrefs.SetInt(HIGH_RATING_KEY, highRating2);
-
-        PlayerPrefs.Save();
     }
 }
+
