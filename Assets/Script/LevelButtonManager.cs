@@ -10,6 +10,10 @@ public class LevelButtonManager : MonoBehaviour
     public GameObject level2Screen;
 
     public GameObject setting;
+
+    public GameObject tutorial1;
+    public GameObject tutorial2;
+    public GameObject tutorial3;
     // Start is called before the first frame update
     public void Level1Start()
     {
@@ -44,5 +48,50 @@ public class LevelButtonManager : MonoBehaviour
         {
             setting.SetActive(true);
         }
+    }
+
+
+    public void wineTutorial()
+    {
+        tutorial2.SetActive(false);
+        tutorial1.SetActive(true);
+    }
+
+    public void shakerTutorial()
+    {
+        tutorial2.SetActive(true);
+        tutorial1.SetActive(false);
+        tutorial3.SetActive(false);
+    }
+
+    public void shakerDropTutorial()
+    {
+        tutorial2.SetActive(false);
+        tutorial3.SetActive(true);
+    }
+
+    public void tutorialPopUp()
+    {
+        level1Screen.SetActive(false);
+        level2Screen.SetActive(false);
+        tutorial1.SetActive(true);
+    }
+
+    public void closeTutorial2()
+    {
+        tutorial1.SetActive(false);
+        tutorial2.SetActive(false);
+        tutorial3.SetActive(false);
+        level1Screen.SetActive(true);
+        if (WaterManager.level1Completed)
+        {
+            level2Screen.SetActive(true);
+        }
+    }
+
+
+    public void closeSetting()
+    {
+        setting.SetActive(false);
     }
 }

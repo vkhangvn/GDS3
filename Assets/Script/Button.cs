@@ -27,6 +27,7 @@ public class Button : MonoBehaviour
     // Update is called once per frame
     public void onTaskClick()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Wine 1");
     }
 

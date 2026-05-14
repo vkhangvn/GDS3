@@ -25,13 +25,20 @@ public class Spice : MonoBehaviour
     {
 
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
 
             if (!completed)
             {
                 GameObject newWater = Object.Instantiate(spicePrefab, transform.position, Quaternion.identity, fluid.transform);
-
+                 Object.Instantiate(spicePrefab, transform.position, Quaternion.identity, fluid.transform);
+               Object.Instantiate(spicePrefab, transform.position, Quaternion.identity, fluid.transform);
+                Object.Instantiate(spicePrefab, transform.position, Quaternion.identity, fluid.transform);
+                 Object.Instantiate(spicePrefab, transform.position, Quaternion.identity, fluid.transform);
+                Object.Instantiate(spicePrefab, transform.position, Quaternion.identity, fluid.transform);
+                Object.Instantiate(spicePrefab, transform.position, Quaternion.identity, fluid.transform);
+                Object.Instantiate(spicePrefab, transform.position, Quaternion.identity, fluid.transform);
+                Object.Instantiate(spicePrefab, transform.position, Quaternion.identity, fluid.transform);
             }
 
         }

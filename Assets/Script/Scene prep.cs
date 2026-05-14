@@ -19,6 +19,7 @@ public class Sceneprep : MonoBehaviour
     public GameObject wineTutorial;
     public GameObject shakerTutorial;
 
+    public GameObject sampleWine;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +60,7 @@ public class Sceneprep : MonoBehaviour
         winePrep = false;
         shakerPrep = true;
         prepControl.SetActive(false);
+        sampleWine.SetActive(false);
     }
 
     IEnumerator Timer2()

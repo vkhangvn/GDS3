@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class WallLV2 : MonoBehaviour
 {
+    public GameObject breakSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class WallLV2 : MonoBehaviour
     }
     IEnumerator Timer()
     {
+        breakSound.SetActive(true);
         yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene("Fail menu 2");
     }

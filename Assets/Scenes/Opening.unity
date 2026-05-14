@@ -405,6 +405,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264282795}
   m_CullTransparentMesh: 1
+--- !u!1 &362431750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362431754}
+  - component: {fileID: 362431753}
+  - component: {fileID: 362431752}
+  - component: {fileID: 362431751}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &362431751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362431750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d49b7c1bcd2e07499844da127be038d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_ForceModuleActive: 0
+--- !u!114 &362431752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362431750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &362431753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362431750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &362431754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362431750}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &371086925
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,10 +669,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 386766493}
-  selectedCommands:
-  - {fileID: 386766499}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -618,7 +699,7 @@ MonoBehaviour:
   storyText: Welcome to your bartender training course
   description: 
   character: {fileID: 1159026013}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 0305f9d3debcaca4588a16cc22662d3d, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -706,8 +787,8 @@ MonoBehaviour:
   storyText: You can review the basic with tutorial or start the course to get the
     qualification right away!
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1159026013}
+  portrait: {fileID: 21300000, guid: 0305f9d3debcaca4588a16cc22662d3d, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -734,8 +815,8 @@ MonoBehaviour:
   storyText: Here we will make drinks and entertain our customer using our telekinetic
     power
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1159026013}
+  portrait: {fileID: 21300000, guid: 18beeb778c24d9d4898e641a8e3aa9d4, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -764,7 +845,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1159026013}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 0305f9d3debcaca4588a16cc22662d3d, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -776,7 +857,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &386766499
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -836,7 +917,7 @@ GameObject:
   - component: {fileID: 1159026014}
   - component: {fileID: 1159026013}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Mentor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -857,7 +938,10 @@ MonoBehaviour:
   nameText: 
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: 21300000, guid: 2880484caa446d54e92736f769c260f0, type: 3}
+  - {fileID: 21300000, guid: 18beeb778c24d9d4898e641a8e3aa9d4, type: 3}
+  - {fileID: 21300000, guid: 0305f9d3debcaca4588a16cc22662d3d, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -1438,7 +1522,7 @@ MonoBehaviour:
   storyText: {fileID: 2031762166}
   storyTextGO: {fileID: 0}
   characterImage: {fileID: 1352495483}
-  fitTextWithImage: 1
+  fitTextWithImage: 0
   closeOtherDialogs: 0
 --- !u!114 &1816481820
 MonoBehaviour:
@@ -1779,3 +1863,4 @@ SceneRoots:
   - {fileID: 1706896516}
   - {fileID: 1159026014}
   - {fileID: 1247783481}
+  - {fileID: 362431754}

@@ -42,7 +42,7 @@ public class Shaker : MonoBehaviour
         float speed = rb.velocity.magnitude;
         
 
-        if (speed > 95f || speed < -95f)
+        if (speed > 50f || speed < -50f)
         {
             StartCoroutine(plusScore());
         }
