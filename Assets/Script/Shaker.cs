@@ -24,6 +24,9 @@ public class Shaker : MonoBehaviour
     public GameObject transitionTimer;
     public transitionTime transitionTime;
 
+    public GameObject hit1;
+    public GameObject hit2;
+
     [SerializeField] private Animator shakerOpened;
     public bool pouring;
 
@@ -34,18 +37,24 @@ public class Shaker : MonoBehaviour
         glass.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        Vector3 velocity = rb.velocity;
-        float speed = rb.velocity.magnitude;
-        
 
-        if (speed > 50f || speed < -50f)
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Trigger1"))
         {
+            hit1.SetActive(false);
+            hit2.SetActive(true);
             StartCoroutine(plusScore());
         }
+
+        if (other.CompareTag("Trigger2"))
+        {
+            hit2.SetActive(false);
+            hit1.SetActive(true);
+            StartCoroutine(plusScore());
+        }
+
+    
     }
 
     IEnumerator Timer()
