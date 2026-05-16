@@ -19,6 +19,8 @@ public class Button : MonoBehaviour
 
     public GameObject settingSound;
     public GameObject creditSound;
+
+    public Toggle toggle;
     // Start is called before the first frame update
     void Start()
     {
@@ -126,5 +128,16 @@ public class Button : MonoBehaviour
         Application.Quit();
     }
 
+    public void Toggle()
+    {
+        toggle.onValueChanged.AddListener(delegate { toggleChangeCheck(); });
+    }
 
+    public void toggleChangeCheck()
+    {
+        if(toggle.isOn)
+        {
+            WaterManager.level1Completed = true;
+        }
+    }
 }
