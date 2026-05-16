@@ -17,7 +17,8 @@ public class Button : MonoBehaviour
 
     public static float volume;
 
-
+    public GameObject settingSound;
+    public GameObject creditSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +59,7 @@ public class Button : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F))
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene("Wine 1");
         }
             
@@ -95,18 +97,17 @@ public class Button : MonoBehaviour
 
     IEnumerator settingOpening()
     {
-        clickSound1.SetActive(true);
+        settingSound.SetActive(true);
         yield return new WaitForSeconds(0.4f);
         setting.SetActive(true);
-        clickSound1.SetActive(false);
+        settingSound.SetActive(false);
     }
 
     IEnumerator settingexit()
     {
-        clickSound1.SetActive(true);
         yield return new WaitForSeconds(0.4f);
         setting.SetActive(false);
-        clickSound1.SetActive(false);
+
     }
 
     public void setVolumeLimit()
@@ -119,4 +120,11 @@ public class Button : MonoBehaviour
         volume = volumeLimitSlider.value;
         AudioListener.volume = volume;
     }
+
+    public void GameExit()
+    {
+        Application.Quit();
+    }
+
+
 }

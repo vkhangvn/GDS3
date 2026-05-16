@@ -27,6 +27,7 @@ public class Shaker : MonoBehaviour
     public GameObject hit1;
     public GameObject hit2;
 
+    public GameObject dialogueCheck2;
     [SerializeField] private Animator shakerOpened;
     public bool pouring;
 
@@ -60,7 +61,7 @@ public class Shaker : MonoBehaviour
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(10f);
-
+        dialogueCheck2.SetActive(true);
         transitionTimer.SetActive(true);
         glass.SetActive(true);
         transitionTime.shakerDrop = true;

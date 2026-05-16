@@ -26,4 +26,6 @@ public class PointCaculator : MonoBehaviour
             waterInGlass++;
         }
     }
+
+
 }

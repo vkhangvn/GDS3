@@ -10,6 +10,7 @@ public class ButtonManager2 : MonoBehaviour
 
     public void retry()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Wine 2");
     }
 
@@ -22,9 +23,9 @@ public class ButtonManager2 : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F))
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene("Wine 2");
         }
-
 
     }
 
