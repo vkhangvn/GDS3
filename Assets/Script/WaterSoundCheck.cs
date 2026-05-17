@@ -10,6 +10,8 @@ public class WaterSoundCheck : MonoBehaviour
 
     public bool okRun;
     public bool goodRun;
+
+    public GameObject particle1;
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Water"))
@@ -34,6 +36,7 @@ public class WaterSoundCheck : MonoBehaviour
             if (goodRun)
             {
                 StartCoroutine(plusScore1());
+                particle1.SetActive(true);  
                 goodRun = false;
             }
            

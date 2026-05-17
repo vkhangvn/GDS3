@@ -45,7 +45,7 @@ public class DialogueCheck1 : MonoBehaviour
             Destroy(fluid);
         }
 
-        if (slime.waterLeft > 50 && slime.waterLeft <= 100)
+        if (slime.waterLeft > 50 && slime.waterLeft <= 120)
         {
             vampireNeutral.SetActive(true);
             vampireHappy.SetActive(false);
@@ -55,7 +55,7 @@ public class DialogueCheck1 : MonoBehaviour
             Destroy(fluid);
         }
 
-        if (slime.waterLeft > 100)
+        if (slime.waterLeft > 120)
         {
             vampireNeutral.SetActive(false);
             vampireHappy.SetActive(true);

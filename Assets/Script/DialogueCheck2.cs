@@ -34,7 +34,7 @@ public class DialogueCheck2 : MonoBehaviour
 
         }
 
-        if (shaker.score > 5 && shaker.score <= 10)
+        if (shaker.score > 5 && shaker.score <= 15)
         {
             vampireNeutral.SetActive(true);
             vampireHappy.SetActive(false);
@@ -43,7 +43,7 @@ public class DialogueCheck2 : MonoBehaviour
    
         }
 
-        if (shaker.score > 10)
+        if (shaker.score > 15)
         {
             vampireNeutral.SetActive(false);
             vampireHappy.SetActive(true);
