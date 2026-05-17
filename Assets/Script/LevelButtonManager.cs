@@ -14,6 +14,10 @@ public class LevelButtonManager : MonoBehaviour
     public GameObject tutorial1;
     public GameObject tutorial2;
     public GameObject tutorial3;
+
+    public GameObject tutorial2_1;
+    public GameObject tutorial2_2;
+    public GameObject tutorial2_3;
     // Start is called before the first frame update
     public void Level1Start()
     {
@@ -82,6 +86,9 @@ public class LevelButtonManager : MonoBehaviour
         tutorial1.SetActive(false);
         tutorial2.SetActive(false);
         tutorial3.SetActive(false);
+        tutorial2_1.SetActive(false);
+        tutorial2_2.SetActive(false);
+        tutorial2_3.SetActive(false);
         level1Screen.SetActive(true);
         if (WaterManager.level1Completed)
         {
@@ -94,4 +101,33 @@ public class LevelButtonManager : MonoBehaviour
     {
         setting.SetActive(false);
     }
+
+    public void nextPage1()
+    {
+        tutorial2_2.SetActive(true);
+        tutorial2_1.SetActive(false);
+    }
+
+    public void nextPage2()
+    {
+        tutorial2_3.SetActive(true);
+        tutorial2_2.SetActive(false);
+        tutorial2_1.SetActive(false);
+    }
+
+    public void previousPage1()
+    {
+        tutorial2_3.SetActive(false);
+        tutorial2_2.SetActive(false);
+        tutorial2_1.SetActive(true);
+    }
+
+    public void tutorialPopUp2()
+    {
+        level1Screen.SetActive(false);
+        level2Screen.SetActive(false);
+        tutorial2_1.SetActive(true);
+    }
+
+
 }
