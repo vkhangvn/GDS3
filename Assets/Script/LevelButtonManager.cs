@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelButtonManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class LevelButtonManager : MonoBehaviour
     public GameObject tutorial2_1;
     public GameObject tutorial2_2;
     public GameObject tutorial2_3;
+
+    public Toggle toggle;
     // Start is called before the first frame update
     public void Level1Start()
     {
@@ -129,5 +132,21 @@ public class LevelButtonManager : MonoBehaviour
         tutorial2_1.SetActive(true);
     }
 
+    public void Toggle()
+    {
+        toggle.onValueChanged.AddListener(delegate { toggleChangeCheck(); });
+    }
 
+    public void toggleChangeCheck()
+    {
+        if (toggle.isOn)
+        {
+            WaterManager.level1Completed = true;
+        }
+
+        if (!toggle.isOn)
+        {
+            WaterManager.level1Completed = false;
+        }
+    }
 }

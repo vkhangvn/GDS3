@@ -20,7 +20,7 @@ public class LV2Check2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pointCheck.iceInGlass >= 0 && pointCheck.iceInGlass <= 1)
+        if (pointCheck.iceInGlass >= 0 && pointCheck.iceInGlass < 1)
         {
             vampireNeutral.SetActive(false);
             vampireHappy.SetActive(false);
@@ -28,7 +28,7 @@ public class LV2Check2 : MonoBehaviour
             check2.SetActive(false);
 
         }
-        if (pointCheck.iceInGlass > 1 && pointCheck.iceInGlass <= 2)
+        if (pointCheck.iceInGlass >= 1 && pointCheck.iceInGlass <= 2)
         {
             vampireNeutral.SetActive(true);
             vampireHappy.SetActive(false);

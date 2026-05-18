@@ -65,7 +65,6 @@ public class Sceneprep : MonoBehaviour
 
     IEnumerator Timer2()
     {
-        shaker.transform.position = startPosition.position;
         yield return new WaitForSeconds(0.3f);
         shaker.SetActive(true);
         shakerPrep = false;
