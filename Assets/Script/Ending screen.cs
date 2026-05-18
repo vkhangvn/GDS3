@@ -43,12 +43,12 @@ public class Endingscreen : MonoBehaviour
             rating = 1;
         }
 
-        if (score < 1700 && score >= 700 && time >= 90 )
+        if (score < 1250 && score >= 700 && time >= 90 )
         {
             rating = 2;
         }
 
-        if (score >= 1700 && time >= 120)
+        if (score >= 1250 && time >= 120)
         {
             rating = 3;
         }

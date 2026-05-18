@@ -9,10 +9,17 @@ public class pointCheckLv2 : MonoBehaviour
     public int waterInGlass;
     public int spiceInGlass;
     public int iceInGlass;
+
+    public GameObject goodSound;
+    public GameObject particle;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        
+        if (waterInGlass > 120)
+        {
+            goodSound.SetActive(true);
+            particle.SetActive(true);
+        }
     }
 
     // Update is called once per frame

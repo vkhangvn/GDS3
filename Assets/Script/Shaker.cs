@@ -28,6 +28,11 @@ public class Shaker : MonoBehaviour
     public GameObject hit2;
 
     public GameObject dialogueCheck2;
+
+    public GameObject arrow1;
+    public GameObject arrow2;
+    public GameObject arrow1Light;
+    public GameObject arrow2Light;
     [SerializeField] private Animator shakerOpened;
     public bool pouring;
 
@@ -43,6 +48,7 @@ public class Shaker : MonoBehaviour
     {
         if (other.CompareTag("Trigger1"))
         {
+            StartCoroutine(trigger1());
             hit1.SetActive(false);
             hit2.SetActive(true);
             StartCoroutine(plusScore());
@@ -50,6 +56,7 @@ public class Shaker : MonoBehaviour
 
         if (other.CompareTag("Trigger2"))
         {
+            StartCoroutine(trigger2());
             hit2.SetActive(false);
             hit1.SetActive(true);
             StartCoroutine(plusScore());
@@ -99,7 +106,29 @@ public class Shaker : MonoBehaviour
         scoring3.SetActive(false);
         pointAudio.SetActive(false);
     }
+
+
+    IEnumerator trigger1()
+    {
+        arrow2Light.SetActive(true);
+        arrow2.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        arrow2Light.SetActive(false);
+        arrow1.SetActive(true);
+    }
+
+
+    IEnumerator trigger2()
+    {
+        arrow1Light.SetActive(true);
+        arrow1.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        arrow1Light.SetActive(false);
+        arrow2.SetActive(true);
+    }
 }
+
+
 
 // 300 goodfeeback
 // 200 nice
