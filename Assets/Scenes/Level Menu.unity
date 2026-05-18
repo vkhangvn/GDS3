@@ -7229,7 +7229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 624, y: -221}
+  m_AnchoredPosition: {x: 620, y: -263}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099643902
@@ -12259,7 +12259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 534.00006, y: -4.9999638}
+  m_AnchoredPosition: {x: 506, y: -15}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800934330
@@ -12282,10 +12282,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The bottle will follow your hand
+  m_text: 'The bottle AUTOMATICALY FOLLOW your hand
 
-    LEFT-CLICK to pour and try not to
-    spill the liquid'
+
+    LEFT-CLICK to pour and
+    try not to spill the liquid'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 64b1fa72b457d0347aa5480033a5e85c, type: 2}
   m_sharedMaterial: {fileID: -1324872123059302817, guid: 64b1fa72b457d0347aa5480033a5e85c, type: 2}
@@ -12312,8 +12313,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 47
+  m_fontSizeBase: 47
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12348,7 +12349,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -230.22925, y: 0, z: 0, w: 0}
+  m_margin: {x: -230.22925, y: 0, z: -123.41378, w: 15.729247}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -13607,7 +13608,7 @@ MonoBehaviour:
   tutorial2_1: {fileID: 1966303410}
   tutorial2_2: {fileID: 1450412550}
   tutorial2_3: {fileID: 221877576}
-  toggle: {fileID: 0}
+  toggle: {fileID: 105484393}
 --- !u!1 &2054117896
 GameObject:
   m_ObjectHideFlags: 0

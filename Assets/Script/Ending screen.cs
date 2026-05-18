@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Fungus;
 
 public class Endingscreen : MonoBehaviour
 
@@ -27,8 +28,14 @@ public class Endingscreen : MonoBehaviour
     public GameObject twoStarDrink;
     public GameObject threeStarDrink;
 
+    public bool randomOnce;
+
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI ratingText;
+
+    public Flowchart mainFlowchart;
+
+    public int random;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +57,28 @@ public class Endingscreen : MonoBehaviour
             oneStarDrink.SetActive(true);
             vampire1.SetActive(true);
             rating = 0;
+
+            if (randomOnce)
+            {
+                randomOnce = false;
+                random = Random.Range(1, 5);
+                if (random == 1)
+                {
+                    mainFlowchart.ExecuteBlock("Bad feedback 1");
+                }
+                if (random == 2)
+                {
+                    mainFlowchart.ExecuteBlock("Bad feedback 2");
+                }
+                if (random == 3)
+                {
+                    mainFlowchart.ExecuteBlock("Bad feedback 3");
+                }
+                if (random == 4)
+                {
+                    mainFlowchart.ExecuteBlock("Bad feedback 4");
+                }
+            }
         }
 
         if (score < 700 && score >= 300 && time >= 60 )
@@ -58,6 +87,28 @@ public class Endingscreen : MonoBehaviour
             vampire1.SetActive(true);
             star1.SetActive(true);
             rating = 1;
+
+            if (randomOnce)
+            {
+                randomOnce = false;
+                random = Random.Range(1, 5);
+                if (random == 1)
+                {
+                    mainFlowchart.ExecuteBlock("Bad feedback 1");
+                }
+                if (random == 2)
+                {
+                    mainFlowchart.ExecuteBlock("Bad feedback 2");
+                }
+                if (random == 3)
+                {
+                    mainFlowchart.ExecuteBlock("Bad feedback 3");
+                }
+                if (random == 4)
+                {
+                    mainFlowchart.ExecuteBlock("Bad feedback 4");
+                }
+            }
         }
 
         if (score < 1250 && score >= 700 && time >= 90 )
@@ -67,6 +118,32 @@ public class Endingscreen : MonoBehaviour
             star1.SetActive(true);
             star2.SetActive(true);
             rating = 2;
+
+            if (randomOnce)
+            {
+                randomOnce = false;
+                random = Random.Range(1, 6);
+                if (random == 1)
+                {
+                    mainFlowchart.ExecuteBlock("Ok feedback 1");
+                }
+                if (random == 2)
+                {
+                    mainFlowchart.ExecuteBlock("Ok feedback 2");
+                }
+                if (random == 3)
+                {
+                    mainFlowchart.ExecuteBlock("Ok feedback 3");
+                }
+                if (random == 4)
+                {
+                    mainFlowchart.ExecuteBlock("Ok feedback 4");
+                }
+                if (random == 5)
+                {
+                    mainFlowchart.ExecuteBlock("Ok feedback 5");
+                }
+            }
         }
 
         if (score >= 1250 && time >= 120)
@@ -77,6 +154,31 @@ public class Endingscreen : MonoBehaviour
             star2.SetActive(true);
             star3.SetActive(true);
             rating = 3;
+
+            if (randomOnce)
+            {
+                random = Random.Range(1, 6);
+                if (random == 1)
+                {
+                    mainFlowchart.ExecuteBlock("Good feedback 1");
+                }
+                if (random == 2)
+                {
+                    mainFlowchart.ExecuteBlock("Good feedback 2");
+                }
+                if (random == 3)
+                {
+                    mainFlowchart.ExecuteBlock("Good feedback 3");
+                }
+                if (random == 4)
+                {
+                    mainFlowchart.ExecuteBlock("Good feedback 4");
+                }
+                if (random == 5)
+                {
+                    mainFlowchart.ExecuteBlock("Good feedback 5");
+                }
+            }
         }
         string scoreT = score.ToString();
         string ratingT = rating.ToString();

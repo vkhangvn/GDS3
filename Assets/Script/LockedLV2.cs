@@ -20,5 +20,11 @@ public class LockedLV2 : MonoBehaviour
             locked.SetActive(false);
             unlocked.SetActive(true);
         }
+
+        if (WaterManager.level1Completed == false)
+        {
+            locked.SetActive(true);
+            unlocked.SetActive(false);
+        }
     }
 }

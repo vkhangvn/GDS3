@@ -36,6 +36,9 @@ public class Shaker : MonoBehaviour
     [SerializeField] private Animator shakerOpened;
     public bool pouring;
 
+    public GameObject shakeSound;
+
+    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,20 @@ public class Shaker : MonoBehaviour
         }
 
     
+    }
+
+    public void Update()
+    {
+  
+        if (rb.velocity.magnitude > 0.1f)
+        {
+            shakeSound.SetActive(true);    
+        }
+
+        else
+        {
+            shakeSound.SetActive(false);
+        }
     }
 
     IEnumerator Timer()

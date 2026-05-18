@@ -21,10 +21,12 @@ public class Button : MonoBehaviour
     public GameObject creditSound;
 
     public Toggle toggle;
+
+    public static bool openingPlayed;
     // Start is called before the first frame update
     void Start()
     {
-        
+        openingPlayed = true;
     }
 
     // Update is called once per frame
@@ -74,7 +76,15 @@ public class Button : MonoBehaviour
 
     public void Opening()
     {
-        StartCoroutine(timerOpening());
+        if (openingPlayed == true)
+        {
+            openingPlayed = true;
+            StartCoroutine(timerOpening());
+        }
+        if (openingPlayed == false)
+        {
+            StartCoroutine(timerStart());
+        }
 
     }
 
@@ -144,5 +154,13 @@ public class Button : MonoBehaviour
         {
             WaterManager.level1Completed = false;
         }
+    }
+
+    IEnumerator timerStart()
+    {
+        themeSong.SetActive(false);
+        clickSound1.SetActive(true);
+        yield return new WaitForSeconds(0.4f);
+        SceneManager.LoadScene("Level Menu");
     }
 }

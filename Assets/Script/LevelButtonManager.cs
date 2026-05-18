@@ -144,7 +144,7 @@ public class LevelButtonManager : MonoBehaviour
             WaterManager.level1Completed = true;
         }
 
-        if (!toggle.isOn)
+        if (toggle.isOn == false)
         {
             WaterManager.level1Completed = false;
         }
