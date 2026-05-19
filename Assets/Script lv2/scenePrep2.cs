@@ -17,6 +17,8 @@ public class scenePrep2 : MonoBehaviour
     public Transform startPosition;
 
     public GameObject iceCube;
+
+    public GameObject wineSample;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +52,7 @@ public class scenePrep2 : MonoBehaviour
 
     IEnumerator Timer1()
     {
-        wine.transform.position = startPosition.position;
+        wineSample.SetActive(false);
         yield return new WaitForSeconds(0.3f);
         wine.SetActive(true);
         winePrep = false;
