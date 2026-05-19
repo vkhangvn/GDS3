@@ -12,6 +12,9 @@ public class Pause : MonoBehaviour
     public pauseTimer pauseTimer;
 
     public GameObject gameHand;
+
+    public GameObject shakeSound;
+    public GameObject pourSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,8 @@ public class Pause : MonoBehaviour
             {
                 if (pausing == false)
                 {
+                    shakeSound.SetActive(false);
+                    pourSound.SetActive(false);
                     gameHand.SetActive(false);
                     Cursor.visible = true;
                     pauseMenu.SetActive(true);

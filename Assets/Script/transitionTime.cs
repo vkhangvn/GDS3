@@ -11,8 +11,6 @@ public class transitionTime : MonoBehaviour
 
     public GameObject transitionTimer;
 
-    public GameObject gameTimer;
-
     public GameObject scenePrep;
 
     public bool wine;
@@ -78,7 +76,6 @@ public class transitionTime : MonoBehaviour
     {
        
         yield return new WaitForSeconds(0.1f);
-        gameTimer.SetActive(true);
         scenePrep.SetActive(true);
         timeRemain = 3f;
         transitionTimer.SetActive(false);

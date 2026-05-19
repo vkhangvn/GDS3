@@ -48,6 +48,7 @@ public class Button : MonoBehaviour
 
     public void resume()
     {
+        Time.timeScale = 1;
         pause.pausing = false;
         resumeTimer.SetActive(true);
 
@@ -55,7 +56,7 @@ public class Button : MonoBehaviour
 
     public void mainMenuLoad()
     {
-        
+        Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
 
@@ -71,6 +72,7 @@ public class Button : MonoBehaviour
 
     public void next()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Level Menu");
     }
 

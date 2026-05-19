@@ -38,10 +38,13 @@ public class endingLV2 : MonoBehaviour
 
     public bool randomOnce;
 
+    public GameObject pauseMenu;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        pauseMenu.SetActive(false);
         randomOnce = true;
         Cursor.visible = true;
         gameHand.SetActive(false);
@@ -51,11 +54,9 @@ public class endingLV2 : MonoBehaviour
     void Update()
     {
         score = (pointCheckLv2.waterInGlass * 8) + (pointCheckLv2.spiceInGlass * 2) + (pointCheckLv2.iceInGlass * 8);
-        time = timer2.timeRemain;
 
-        Debug.Log(time);
 
-        if (score < 300 && time < 30 && time > 0)
+        if (score < 300)
         {
             oneStarDrink.SetActive(true);
             vampire1.SetActive(true);
@@ -84,7 +85,7 @@ public class endingLV2 : MonoBehaviour
             }
         }
 
-        if (score < 700 && score >= 300 && time >= 30)
+        if (score < 700 && score >= 300)
         {
             oneStarDrink.SetActive(true);
             vampire1.SetActive(true);
@@ -114,7 +115,7 @@ public class endingLV2 : MonoBehaviour
             }
         }
 
-        if (score < 1700 && score >= 700 && time >= 40)
+        if (score < 1700 && score >= 700)
         {
             twoStarDrink.SetActive(true);
             vampire2.SetActive(true);
@@ -145,7 +146,7 @@ public class endingLV2 : MonoBehaviour
             }
         }
 
-        if (score >= 1700 && time >= 50)
+        if (score >= 1700)
         {
             threeStarDrink.SetActive(true);
             vampire3.SetActive(true);
@@ -185,6 +186,7 @@ public class endingLV2 : MonoBehaviour
         // 3star = 50s
         // 2star = 40s
         // 1star = 30s
+
     }
 
 

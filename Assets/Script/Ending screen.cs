@@ -12,7 +12,6 @@ public class Endingscreen : MonoBehaviour
     public int rating;
     public float time;
     public PointCaculator pointCaculator;
-    public Timer timer;
     public Shaker shaker;
     public GameObject gameHand;
 
@@ -37,9 +36,12 @@ public class Endingscreen : MonoBehaviour
 
     public int random;
 
+    public GameObject pauseMenu;
+
     // Start is called before the first frame update
     void Start()
     {
+        pauseMenu.SetActive(false);
         gameHand.SetActive(false);
         Cursor.visible = true;
     }
@@ -48,11 +50,10 @@ public class Endingscreen : MonoBehaviour
     void Update()
     {
         score = (pointCaculator.waterInGlass * 8) + (shaker.score *4);
-        time = timer.timeRemain;
 
         Debug.Log(time);
 
-        if (score < 300 && time < 60 && time > 0)
+        if (score < 300)
         {
             oneStarDrink.SetActive(true);
             vampire1.SetActive(true);
@@ -76,12 +77,13 @@ public class Endingscreen : MonoBehaviour
                 }
                 if (random == 4)
                 {
+
                     mainFlowchart.ExecuteBlock("Bad feedback 4");
                 }
             }
         }
 
-        if (score < 700 && score >= 300 && time >= 60 )
+        if (score < 700)
         {
             oneStarDrink.SetActive(true);
             vampire1.SetActive(true);
@@ -111,7 +113,7 @@ public class Endingscreen : MonoBehaviour
             }
         }
 
-        if (score < 1250 && score >= 700 && time >= 90 )
+        if (score < 1250 && score >= 700)
         {
             twoStarDrink.SetActive(true);
             vampire2.SetActive(true);
@@ -142,7 +144,7 @@ public class Endingscreen : MonoBehaviour
             }
         }
 
-        if (score >= 1250 && time >= 120)
+        if (score >= 1250)
         {
             threeStarDrink.SetActive(true);
             vampire3.SetActive(true);
