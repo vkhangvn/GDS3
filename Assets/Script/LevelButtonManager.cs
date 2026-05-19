@@ -12,6 +12,7 @@ public class LevelButtonManager : MonoBehaviour
 
     public GameObject setting;
 
+    public GameObject tutorial0;
     public GameObject tutorial1;
     public GameObject tutorial2;
     public GameObject tutorial3;
@@ -58,8 +59,17 @@ public class LevelButtonManager : MonoBehaviour
     }
 
 
+    public void Tutorial0()
+    {
+        tutorial0.SetActive(true);
+        tutorial2.SetActive(false);
+        tutorial1.SetActive(false);
+        tutorial3.SetActive(false);
+    }
+
     public void wineTutorial()
     {
+        tutorial0.SetActive(false);
         tutorial2.SetActive(false);
         tutorial1.SetActive(true);
     }
@@ -81,11 +91,12 @@ public class LevelButtonManager : MonoBehaviour
     {
         level1Screen.SetActive(false);
         level2Screen.SetActive(false);
-        tutorial1.SetActive(true);
+        tutorial0.SetActive(true);
     }
 
     public void closeTutorial2()
     {
+        tutorial0.SetActive(false);
         tutorial1.SetActive(false);
         tutorial2.SetActive(false);
         tutorial3.SetActive(false);

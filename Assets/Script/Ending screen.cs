@@ -122,7 +122,7 @@ public class Endingscreen : MonoBehaviour
             if (randomOnce)
             {
                 randomOnce = false;
-                random = Random.Range(1, 6);
+                random = Random.Range(1, 5);
                 if (random == 1)
                 {
                     mainFlowchart.ExecuteBlock("Ok feedback 1");
@@ -138,10 +138,6 @@ public class Endingscreen : MonoBehaviour
                 if (random == 4)
                 {
                     mainFlowchart.ExecuteBlock("Ok feedback 4");
-                }
-                if (random == 5)
-                {
-                    mainFlowchart.ExecuteBlock("Ok feedback 5");
                 }
             }
         }
