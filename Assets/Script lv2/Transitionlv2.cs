@@ -10,9 +10,6 @@ public class Transitionlv2 : MonoBehaviour
     public bool fail;
 
     public GameObject transitionTimer;
-
-    public GameObject gameTimer;
-
     public GameObject scenePrep;
 
     public bool wine;
@@ -78,7 +75,6 @@ public class Transitionlv2 : MonoBehaviour
     {
         Debug.Log("running");
         yield return new WaitForSeconds(0.1f);
-        gameTimer.SetActive(true);
         scenePrep.SetActive(true);
         timeRemain = 3f;
         transitionTimer.SetActive(false);

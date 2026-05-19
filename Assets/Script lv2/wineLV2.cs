@@ -36,6 +36,7 @@ public class wineLV2 : MonoBehaviour
     {
         if (waterNumber > 180)
         {
+            wineAudio.SetActive(false);
             haveWater1 = false;
             StartCoroutine(Timer());
         }
