@@ -25,6 +25,8 @@ public class wineLV2 : MonoBehaviour
     public GameObject ice;
 
     public GameObject check1;
+
+    public GameObject doneText;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class wineLV2 : MonoBehaviour
         if (waterNumber > 180)
         {
             wineAudio.SetActive(false);
+            doneText.SetActive(true);
             haveWater1 = false;
             StartCoroutine(Timer());
         }
@@ -71,6 +74,7 @@ public class wineLV2 : MonoBehaviour
         ice.SetActive(true);
         transitionLV2.ice = true;
         iceContainer.SetActive(true);
+        doneText.SetActive(false);
         transitionTimer.SetActive(true);
         wine.SetActive(false);
         

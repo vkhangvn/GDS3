@@ -49,7 +49,7 @@ public class Endingscreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score = (pointCaculator.waterInGlass * 8) + (shaker.score *4);
+        score = (pointCaculator.waterInGlass * 8) + (shaker.score * 6);
 
         Debug.Log(time);
 

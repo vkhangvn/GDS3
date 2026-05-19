@@ -25,6 +25,8 @@ public class Slime : MonoBehaviour
 
     public GameObject dialogueCheck1;
 
+    public GameObject doneText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,7 @@ public class Slime : MonoBehaviour
         {
             haveWater1 = false;
             StartCoroutine(Timer());
+            doneText.SetActive(true);
         }
         if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -69,7 +72,9 @@ public class Slime : MonoBehaviour
         dialogueCheck1.SetActive(true);
         transitionTimer.SetActive(true);
         transitionTime.shaker = true;
+        doneText.SetActive(false);
         wine.SetActive(false);
+
       
 
     }

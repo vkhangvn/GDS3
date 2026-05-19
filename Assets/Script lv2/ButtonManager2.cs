@@ -32,7 +32,6 @@ public class ButtonManager2 : MonoBehaviour
 
     public void resume()
     {
-        Time.timeScale = 1;
         pause.pausing = false;
         resumeTimer.SetActive(true);
     }

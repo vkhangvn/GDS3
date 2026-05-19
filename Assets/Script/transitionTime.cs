@@ -86,9 +86,9 @@ public class transitionTime : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             wineTutorial.SetActive(true);
-            yield return new WaitForSeconds(0.501f);
+            yield return new WaitForSeconds(0.45f);
             wineTutorial.SetActive(false);
-            yield return new WaitForSeconds(0.501f);
+            yield return new WaitForSeconds(0.45f);
          
         }
 

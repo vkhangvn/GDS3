@@ -25,6 +25,8 @@ public class WaterManager : MonoBehaviour
 
     [SerializeField] private Animator shakerOpened;
 
+    public GameObject doneText;
+
 
 
     // Start is called before the first frame update
@@ -43,6 +45,7 @@ public class WaterManager : MonoBehaviour
 
             if (waterNumber == waterLeft)
             {
+                doneText.SetActive(true);
                 wineAudio.SetActive(false);
                 haveWater2 = false;
                 StartCoroutine(Timer1());
@@ -86,6 +89,7 @@ public class WaterManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         pointChecker.SetActive(true);
         yield return new WaitForSeconds(1f);
+        doneText.SetActive(false);
         endingScreen.SetActive(true);
         shaker1.SetActive(false);
 

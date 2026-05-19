@@ -9,10 +9,7 @@ public class endingLV2 : MonoBehaviour
 {
     public int score;
     public int rating;
-    public float time;
     public pointCheckLv2 pointCheckLv2;
-    public Timer2 timer2;
-
 
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI ratingText;
