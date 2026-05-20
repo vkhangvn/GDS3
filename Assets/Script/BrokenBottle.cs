@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Wall : MonoBehaviour
+public class BrokenBottle : MonoBehaviour
 {
+    public GameObject brokenWine;
+    public GameObject winesprite;
     public GameObject breakSound;
-    public GameObject brokenGlass;
-    public GameObject glass;
-
+    public Transform winePos;
+    public Transform brokenBottle;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,12 @@ public class Wall : MonoBehaviour
             StartCoroutine(Timer());
         }
     }
+
     IEnumerator Timer()
     {
-        brokenGlass.SetActive(true);
-        glass.SetActive(false);
+        brokenBottle.position = winePos.position;
+        brokenWine.SetActive(true);
+        winesprite.SetActive(false);
 
         breakSound.SetActive(true);
         yield return new WaitForSeconds(0.9f);
