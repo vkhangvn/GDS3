@@ -52,8 +52,9 @@ public class scenePrep2 : MonoBehaviour
 
     IEnumerator Timer1()
     {
-        wineSample.SetActive(false);
+        
         yield return new WaitForSeconds(0.3f);
+        wineSample.SetActive(false);
         wine.SetActive(true);
         winePrep = false;
         icePrep = true;

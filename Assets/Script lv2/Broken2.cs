@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WallLV2 : MonoBehaviour
+public class Broken2 : MonoBehaviour
 {
+    public GameObject brokenWine;
+    public GameObject winesprite;
     public GameObject breakSound;
-
-    public GameObject brokenGlass;
-    public GameObject glass;
+    public Transform winePos;
+    public Transform brokenBottle;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,19 +23,17 @@ public class WallLV2 : MonoBehaviour
         {
             StartCoroutine(Timer());
         }
-
-        if (other.CompareTag("Tong"))
-        {
-            StartCoroutine(Timer());
-        }
     }
+
     IEnumerator Timer()
     {
+        brokenBottle.position = winePos.position;
+        brokenWine.SetActive(true);
+        winesprite.SetActive(false);
 
-        brokenGlass.SetActive(true);
-        glass.SetActive(false);
         breakSound.SetActive(true);
         yield return new WaitForSeconds(0.9f);
         SceneManager.LoadScene("Fail menu 2");
     }
 }
+

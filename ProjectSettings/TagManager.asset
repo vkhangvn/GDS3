@@ -17,6 +17,7 @@ TagManager:
   - Spice
   - Trigger1
   - Trigger2
+  - Tong
   layers:
   - Default
   - TransparentFX
