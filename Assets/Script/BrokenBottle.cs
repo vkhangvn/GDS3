@@ -8,8 +8,6 @@ public class BrokenBottle : MonoBehaviour
     public GameObject brokenWine;
     public GameObject winesprite;
     public GameObject breakSound;
-    public Transform winePos;
-    public Transform brokenBottle;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +25,7 @@ public class BrokenBottle : MonoBehaviour
 
     IEnumerator Timer()
     {
-        brokenBottle.position = winePos.position;
+        
         brokenWine.SetActive(true);
         winesprite.SetActive(false);
 
